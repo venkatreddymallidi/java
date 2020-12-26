@@ -1,32 +1,33 @@
 import java.util.Scanner;
-class checkprime
-{ 
+class prime
+{
 public static void main(String args[])
 {
-int factor=0,m;
+int count=0;
 Scanner input=new Scanner(System.in);
-System.out.println("enter a no to check it prime or not");
+System.out.println("Enter a number:");
 int no=input.nextInt();
-m=no/2;  /*factor of no is upto that no/2*/
-if(no==0 || no==1)  //0 and 1 are not prime
- {
-System.out.println(no +"is not a prime number");
-}
+if(no==1)
+{
+System.out.println("not a prime number");}
 else
 {
-for(int i=2;i<=m;i++)
+for(int i=2;i<=no/2;i++)
 {
 if(no%i==0)
-
-System.out.println(no +"not  a prime number"); //finding factors other than itself and 1
-factor=1;
+{
+count++;
 break;
 }
 }
-if(factor==0){
-System.out.println(no +"prime number");
+if(count==0)
+{
+System.out.println("prime number");
+}
+else 
+{
+System.out.println("not a prime number"); 
 }
 }
 }
 }
- 
