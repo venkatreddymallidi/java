@@ -1,32 +1,32 @@
 import java.util.Scanner;
-class prime
+class checkprime
 {
 public static void main(String args[])
 {
 int count=0;
 Scanner input=new Scanner(System.in);
-System.out.println("Enter a number:");
-int no=input.nextInt();
-if(no==1)
+System.out.println("enter a number");
+int num=input.nextInt();
+if(num==1 || num==0)
 {
-System.out.println("not a prime number");}
+System.out.println(num+"not a prime number");
+}
 else
 {
-for(int i=2;i<=no/2;i++)
+for(int i=1;i<=num;i++)
 {
-if(no%i==0)
+if(num%i==0)
 {
 count++;
-break;
 }
 }
-if(count==0)
+if(count==2)
 {
-System.out.println("prime number");
+System.out.println(num+" is a prime number");
 }
-else 
+else
 {
-System.out.println("not a prime number"); 
+System.out.println(num+"is not a prime number");
 }
 }
 }
