@@ -2,7 +2,7 @@
 class declaration
 {
   int res;
-  float res1;
+
   int area(int s)
     {
       res=s*s;
@@ -14,7 +14,7 @@ class declaration
     }
   void area(float l,float b,float h)
     { 
-      res1=l*b*h;
+      res=(int)   (l*b*h);
       System.out.println("volume of cubiod:"+res);
     }
 }
